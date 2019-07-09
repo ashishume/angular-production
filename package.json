@@ -4,11 +4,11 @@
 	"scripts": {
 		"ng": "ng",
 		"start": "node server.js",
-		"build": "ng build",
+		"build": "ng build --prod",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e",
-		"postinstall": "ng build --aot --prod"
+		"postinstall": "ng build --aot -prod --sourcemaps"
 	},
 	"private": true,
 	"dependencies": {
@@ -55,7 +55,8 @@
 		"karma-jasmine-html-reporter": "^0.2.2",
 		"protractor": "~5.4.0",
 		"ts-node": "~7.0.0",
-		"tslint": "~5.11.0"
+		"tslint": "~5.11.0",
+		"typescript": "~3.2.2"
 	},
 	"engines": {
 		"node": "8.10.0",
