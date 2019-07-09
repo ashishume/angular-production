@@ -1,0 +1,117 @@
+<div class="container emp-profile">
+  <div class="row">
+    <div class="col-md-4">
+      <a routerLink='/'>   <img src="../../assets/left-arrow .png"></a>
+        <div class="profile-img">
+          <img class="profile-pic" src={{userDetails.profilePicture}} alt="" />
+        
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h5>
+            {{userDetails.name}}
+          </h5>
+          <h6>
+            {{userDetails.userType}}
+          </h6>
+          <!-- <ul> -->
+          <!-- <li class="inline-display"><i class="fab fa-linkedin"></i></li>
+          <li class="inline-display"><i class="fab fa-twitter"></i></li>
+          <li class="inline-display"><i class="fab fa-github"></i></li> -->
+          <!-- </ul> -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false">More Details</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2">
+
+        <!-- <span *ngFor="let list of followingList">
+          <span *ngIf="list==userDetails._id">
+            
+          </span>
+          <span *ngIf="list!=userDetails._id">
+            
+                <button class="btn btn-dark">Following</button>
+              </span>
+            </span> -->
+            
+            <!-- <span *ngIf="followingUser==false">
+            </span>
+            <span *ngIf="followingUser==true">
+            </span> -->
+            
+            <button disabled class="btn btn-dark" (click)="onFollow(userDetails._id)">Follow</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-work">
+          <p class="proile-rating">HOURLY RATE: <span>$ {{userDetails.rate}}</span></p>
+          <div class="skills">
+            <p>SKILLS</p>
+            <span class="badge badge-info" id="badge" *ngFor="let list of skills">{{list}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  
+            <div class="row">
+              <div class="col-md-6">
+                <label>Name</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{userDetails.name}}</p>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-md-6">
+                <label>Profession</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{userDetails.userType}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            
+            
+            <div class="row">
+              <div class="col-md-6">
+                <label>Total Projects</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{this.projectCount}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Location</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{userDetails.location}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12" style="text-align:justify">
+                <label>Description</label>
+                <p>{{userDetails.userDescription}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </form> -->
+  </div>

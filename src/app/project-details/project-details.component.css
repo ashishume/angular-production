@@ -1,0 +1,78 @@
+
+.bttn {
+    padding: 25px;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+}
+
+.btn {
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* client details */
+
+.client {
+    padding: 25px;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    height: 100%;
+
+}
+
+.primary {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.secondary {
+    font-size: 14px;
+    font-weight: 50;
+}
+
+.brk {
+    padding-bottom: 15px;
+}
+
+
+.lead1 {
+    padding: 25px;
+    padding-left: 0px;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.sec1 {
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-left: 0px;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+
+}
+
+p {
+    font-size: 15px;
+}
+
+.price {
+    display: flex;
+    width: 100%;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+
+}
+
+
+.sec2 {
+    padding-top: 25px;
+    padding-left: 90px;
+
+}
+
+.badge-success {
+    font-size: 13.5px;
+}

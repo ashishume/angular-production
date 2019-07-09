@@ -1,0 +1,82 @@
+<br>
+ <div class="container">
+<div class="row">
+<div class="col-sm-12">
+<h3>Add Project Details</h3>
+
+  <form  #submitProject="ngForm" autocomplete="off" (ngSubmit)="onSubmitProject(submitProject)">
+      <mat-form-field appearance="outline">
+          <mat-label>Project Name</mat-label>
+          <input matInput [(ngModel)]="projectName" name="projectName" >
+          <mat-icon matSuffix>create</mat-icon>
+          
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" >
+          <mat-label>Project Subject</mat-label>
+          
+          <input matInput [(ngModel)]="projectSubject" name="projectSubject" >
+          <mat-icon matSuffix>subject</mat-icon>
+      </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Duration</mat-label>
+          <input matInput type="number" min="0" [(ngModel)]="duration"  name="duration" >
+          <mat-icon matSuffix>av_timer</mat-icon>
+        </mat-form-field>
+        &nbsp;  
+        <mat-form-field appearance="outline">
+            <mat-label>Months/Days</mat-label>
+          <input matInput type="text" min="0" [(ngModel)]="date"  name="date" >
+          <mat-icon matSuffix>date_range</mat-icon>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Project Type</mat-label>
+            <mat-select  [(ngModel)]="projectType"  name="projectType">
+              <mat-option value="One Time Project">One Time Project</mat-option>
+              <mat-option value="Permanent Project">Permanent Project</mat-option>
+              <mat-option value="Hourly Project">Hourly Project</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="outline">
+              <mat-label>Description</mat-label>
+              <textarea matInput [(ngModel)]="description"  name="description" ></textarea>
+              <mat-icon matSuffix>description</mat-icon>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Project Url (optional)</mat-label>
+                <input  matInput [(ngModel)]="projectLink"  name="projectLink" >
+                <mat-icon matSuffix>link</mat-icon>
+              </mat-form-field>
+              <br>
+              <mat-form-field>
+                  <mat-label>Difficulty</mat-label>
+                  <mat-select  [(ngModel)]="levelOfDifficulty"  name="levelOfDifficulty">
+                    <mat-option value="Easy">Easy</mat-option>
+                    <mat-option value="Medium">Medium</mat-option>
+                    <mat-option value="Hard">Hard</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Tags</mat-label>
+                    <input  matInput [(ngModel)]="tags"  name="tags" >
+                    <mat-icon matSuffix>style</mat-icon>
+                    <mat-hint>Use Commas for tags</mat-hint>
+                  </mat-form-field>
+                <br>
+               <button  type="submit" mat-raised-button color="primary">Submit</button>
+              
+  </form>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>

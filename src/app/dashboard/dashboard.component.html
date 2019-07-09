@@ -1,0 +1,146 @@
+<br>
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="sidebar">
+          <span *ngIf="authservice.userData as user">
+            <a class="pointer" (click)="myProfile(userId)">
+              <img id="profile-photo" src="{{user.photoURL}}" class="img-responsive">
+              My Profile
+            </a>
+          </span>
+          <br>
+          <br>
+          <div class="skills">
+            <p>My Skills</p>
+            <span class="badge badge-primary" id="badge" *ngFor="let list of skills">{{list}}</span>
+          </div>
+          <br>
+          <div *ngFor="let list of userDetails">
+            <p>Tickets Available<br><b>{{list.tickets}}</b></p>
+            <div class="followers">
+              <p>Followers<br><b>{{list.followers.length}}</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-9">
+        <div class="input-group mb-3">
+
+
+ 
+
+          <!-- <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img
+                src="../../assets/magnifier.png"></button>
+
+          </div> -->
+
+
+          <!-- <div class="results" [hidden]="!searchText">
+              <div *ngFor="let list of users | filter: searchText">
+                <a routerLink=''>
+                  {{list.name}}<br>
+                  {{list.email}}
+                  <mat-divider></mat-divider>
+                </a>
+              </div>
+            </div>
+
+        <div *ngIf="(users | filter: searchText)?.length==0">
+          <p>No results found</p>
+        </div>-->
+        </div> 
+
+
+
+
+
+        
+
+
+
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+              aria-selected="true">News Feed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+              aria-selected="false">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+              aria-selected="false">Developers</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<br>
+              <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search News Feed.."
+              aria-label="Recipient's username"  aria-describedby="button-addon2">
+    
+            <div *ngFor="let list of newsFeedData | filter: searchText" class="box-card">
+              <div class="heading">{{list.projectName}}</div>
+              <p>{{list.projectType}} - Posted on {{list.date}}</p>
+              <div class="row" id="middle-content">
+                <div class="col-sm-6">
+                  <span style="float:left">${{list.cost}}<br>Budget </span>
+
+                </div>
+                <div class="col-sm-6">
+                  <span style="float:right">
+                    {{list.levelOfDifficulty}} <br>Level of difficulty
+                  </span>
+
+                </div>
+              </div>
+              <p class="description">
+                {{list.description}}
+              </p>
+              <mat-divider></mat-divider>
+              <div class="row">
+                <div class="col-sm-6">
+                  <span>
+                    Author, {{list.author}}
+                  </span>
+
+                </div>
+                <div class="col-sm-6">
+
+                  <span style="float:right">{{list.duration}} long project</span>
+
+                </div>
+              </div>
+              <div class="footer-buttons">
+                <button class="btn btn-outline-primary btn-sm" (click)="projectData(list)">Read More</button>
+              </div>
+            </div>
+          <br>
+               <div *ngIf="(users | filter: searchText)?.length==0">
+                  <p class="alert alert-danger" style="text-align:center">No results found</p>
+                </div>
+            
+          </div>
+
+
+
+
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <app-timeline></app-timeline>
+
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+            <app-users></app-users>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

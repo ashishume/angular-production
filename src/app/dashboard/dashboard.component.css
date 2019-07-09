@@ -1,0 +1,82 @@
+.box-card {
+  border: solid 1px lightgray;
+  padding: 20px;
+  box-shadow: 4px 3px 10px 0px;
+  margin: 20px;
+}
+
+.footer-buttons {
+  padding-top: 5px;
+}
+
+.heading {
+  font-size: 25px;
+  color: #0879FB;
+}
+
+.details {
+  padding-top: 5px;
+}
+
+#middle-content {
+  color: #0879FB;
+}
+
+/* .body {
+  z-index: 5;
+} */
+
+.description {
+  text-align: justify;
+}
+
+/* .mat-tab{
+  max-height: 490px;
+} */
+
+.my-scrollbar {
+  --scrollbar-color: transparent;
+  --scrollbar-container-color: transparent;
+  --scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
+  --scrollbar-thumb-hover-color: rgba(0, 0, 0, 0.3);
+  --scrollbar-border-radius: 4px;
+  --scrollbar-size: 6px;
+  --scrollbar-padding: 8px;
+  --scroll-view-margin: 0;
+  --scroll-view-color: transparent;
+}
+
+#profile-photo {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 300px;
+}
+
+.sidebar {
+  text-align: center;
+  border: solid 1px lightgrey;
+  padding: 10px 5px;
+  /* box-shadow:  1px 1px 10px 0px; */
+}
+
+#badge {
+  margin: 0 2px;
+}
+
+#button-addon2 {
+  z-index: 0;
+  /* search bas has been disabled */
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+/* .results{
+  z-index: 8;
+  position: fixed;
+  margin-top:40px;
+  background-color:white;
+  width:60%;
+  border: solid 1px gray; 
+} */

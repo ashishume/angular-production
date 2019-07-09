@@ -1,0 +1,33 @@
+<br>
+<input type="text" class="form-control" [(ngModel)]="searchUser" placeholder="Search Developers.."
+    aria-label="Recipient's username" aria-describedby="button-addon2">
+
+<div class="container">
+    <div class="row" *ngFor="let list of users | filter:searchUser">
+        <div class="col-sm-12">
+<a class="pointer" (click)=onGettingDetails(list)>
+            <div class="user-box">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="{{list.profilePicture}}" class="profile">
+
+                    </div>
+                    <div class="col-sm-9">
+
+                        <p><img src="../../assets/users.png"> {{list.name}}</p>
+                        <div>
+                            <img src="../../assets/maps-and-flags.png"> {{list.location}}, Joined on {{list.dateOfJoining}}
+                        </div>
+                        <br>
+                           <div *ngIf="list.paymentverificationStatus==0"><img src="../../assets/error.png"> Payment Unverified
+                            <span style="float:right;"><b>$</b> {{list.rate}}/hour</span>
+                        </div> 
+                    </div>
+                </div>
+                
+                
+            </div>
+        </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'over'"
+      [opened]="!(isHandset$ | async)? 'false':'false'">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink='/'>Home</a>
+      <a mat-list-item routerLink='/profile'>Profile</a>
+      <a mat-list-item routerLink='/project-details'>Project Details</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-toolbar">
+    <span *ngIf="getEmail">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </span>
+      <span><a routerLink='/' class="logo">Hel!xWork</a></span>
+       <span style="flex:1 1 auto;"></span>
+        
+       
+        <span *ngIf="getEmail">
+         <div class="dropdown">
+          <span  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span *ngIf="authService.userData as user"><img class="profile-photo" src="{{user.photoURL}}"></span>
+          </span>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" (click)="authService.SignOut()">SignOut</a>
+          </div>
+        </div>
+      </span>
+         
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

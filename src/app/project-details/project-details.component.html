@@ -1,0 +1,101 @@
+<!-- <br> -->
+<!-- <span mat-dialog-actions>
+  <button [mat-dialog-close] class="btn btn-default"><img  src="../../assets/left-arrow .png"></button>
+</span> -->
+
+
+  <div  class="container">
+    <h3> Job details</h3>
+    <br />
+    <div class="row">
+      
+      <div class="col-sm-4" *ngIf="userDetails as user">
+        <div class="bttn">
+          <div class="left-line"></div>
+          <button type="button" class="btn btn-primary">
+            Post a Job like this
+          </button>
+          <br /><br />
+          
+        </div>
+        
+        <div class="client" >
+          <div class="primary">About the client</div>
+          <br />
+          <div class="">{{user.name}}</div>
+          <div class="brk"></div>
+          <div class="" *ngIf="countJobs<=1">{{countJobs}} Job posted</div>
+          <div class="" *ngIf="countJobs>1">{{countJobs}} Jobs posted</div>
+          <div class="brk"></div>
+          <div class="secondary">Member since {{user.dateOfJoining}}</div>
+          <br>
+          <div class="secondary" *ngIf="user.paymentverificationStatus==0">
+            <img src="../../assets/error.png"> Payment unverified
+          </div>
+          <div class="secondary" *ngIf="user.paymentverificationStatus==1">
+            <img src="../../assets/success.png"> Payment verified
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-8" *ngIf="details as list">
+        <div class="lead1">
+          <div class="lead">
+            {{list.projectSubject | titlecase}}
+          </div>
+        </div>
+        
+        <div class="info">
+          <div class="sec1">
+            <div class="primary">{{list.projectName}}</div>
+            <div class="brk"></div>
+            <div class="secondary">Posted on {{list.date}}</div>
+            <hr />
+          </div>
+        </div>
+        
+      <div class="exp">
+        <div class="sec1">
+          <p>Description:</p>
+          <p>{{list.description}}</p>
+          <p>
+            Similar Project Link
+            <a href={{list.projectLink}}>
+              {{list.projectLink}}</a>
+            </p>
+            <p style="padding-bottom:10px;">
+                Please get back to me with your budget and time proposal
+              </p>
+            </div>
+            <hr />
+          </div>
+          
+          <div class="price">
+            <div class="sec1" style="border-right: none !important;">
+                <p class="primary"><i class="fas fa-tag"></i> ${{list.cost}}</p>
+                <p class="secondary">{{list.projectType}}</p>
+              </div>
+              
+              <div class="sec2">
+                <p class="primary">{{list.projectType}}</p>
+                <p class="secondary">
+                  {{list.levelOfDifficulty}}
+                </p>
+              </div>
+            </div>
+            <hr />
+            
+            <div class="tags">
+              <p class="primary" >Skills and expertise</p>
+              <div style="padding-top: 23px;" class="sec1">
+                  <span *ngFor="let array of skills">
+                    &nbsp;
+                    <span class="badge badge-primary">{{array}}</span>
+                  </span>
+                  
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>

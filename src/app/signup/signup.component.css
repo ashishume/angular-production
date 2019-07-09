@@ -1,0 +1,23 @@
+.mat-horizontal-stepper{
+    text-align: center;
+}
+
+.mat-form-field{
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.multiselect{
+    width: 200px;
+}
+
+#spinner{
+    display:block;
+    position: fixed;    
+    top:  0;               
+    right: 0;             
+    bottom: 0;
+    left: 0;
+    margin: 200px auto;
+  
+  }

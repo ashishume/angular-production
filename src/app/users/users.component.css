@@ -1,0 +1,12 @@
+.profile{
+    width: 100px;
+    border-radius: 300px;
+}
+
+.user-box{
+padding: 20px 0;
+border-bottom: solid 1px lightgray;
+}
+.pointer{
+    cursor: pointer;
+  }
