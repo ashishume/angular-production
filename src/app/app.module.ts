@@ -33,6 +33,7 @@ import { ErrorDialogService} from '../app/shared/interceptor/error-dialog.servic
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { SubmitProjectComponent } from './submit-project/submit-project.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { SubmitProjectComponent } from './submit-project/submit-project.componen
     AppMaterialModule,
     BrowserAnimationsModule,
     LayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     
   ],
   exports:[
